@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { addFeature } from '../actions/carAction'
 
 const AdditionalFeatures = props => {
+  console.log('props from additional Features bruh',props)
   return (
     <div className="content">
       <h4>Additional Features</h4>

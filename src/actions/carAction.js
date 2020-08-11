@@ -4,9 +4,9 @@
 // 3. action types - variables to manage action type strings to avoid hard-to-find bugs
 
 export const REMOVE_FEATURE = 'REMOVE_FEATURE'
-export const removeFeature = () => {
+export const removeFeature = (value) => {
     console.log('is it running? - removeFeature fn')
-    return { type: REMOVE_FEATURE }
+    return { type: REMOVE_FEATURE, payload: value }
 }
 export const ADD_FEATURE = 'ADD_FEATURE'
 export const addFeature = (value) => {
