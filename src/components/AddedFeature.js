@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
 const AddedFeature = props => {
   return (
@@ -10,4 +11,11 @@ const AddedFeature = props => {
   );
 };
 
-export default AddedFeature;
+const mapStateToProps = (state) => {
+  console.log('this is from AddedFeature', state)
+  return {
+    car: state.car
+  }
+}
+
+export default connect(mapStateToProps, {})(AddedFeature);
