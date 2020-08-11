@@ -38,6 +38,7 @@ export const carReducer = ( state = initialState, action) => {
             const removeArray = state.car.features.filter(feature => feature.id !== action.payload.id)
             return {
                 ...state,
+                additionalPrice: state.additionalPrice - action.payload.price,
                 car: {
                     ...state.car,
                     features: removeArray
